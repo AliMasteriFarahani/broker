@@ -1,0 +1,33 @@
+.awards{
+    width:100%
+}
+.main{
+    width:60% !important;
+}
+
+.form-inp{
+    display: flex;
+}
+
+.divider{
+    border-bottom: 1px solid #ccc;
+    margin: 1rem auto;
+}
+.award{
+    display: flex;
+    border: 1px dashed #ccc;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.img-awd{
+    width: 7rem;
+    height: 7rem;
+    box-shadow: 0 0 7px;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+.awd-details div span{
+    margin-right: 2rem;
+    display: inline-block;
+}

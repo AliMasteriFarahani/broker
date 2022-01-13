@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import React from "react";
+import { BrowserRouter as Router, Route, NavLink, Routes } from "react-router-dom";
+import Button from "@mui/material/Button";
+import Login from "./components/Login/Login";
+import Register from "./components/Register/Register";
+import LoginRegister from "./components/Login/LoginRegister";
+import Awards from "./components/Awards/Awards";
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+    render() {
+        return (
+            <Router>
+                <div className="App">
+                  <div className="main">
+                    <Routes>
+                        <Route path="/" element={<LoginRegister />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/login-register" element={<LoginRegister />} />
+                        <Route path="/register" element={<Register/>} />
+                        <Route path="/awards" element={<Awards/>} />
+                    </Routes>
+                    </div>
+                </div>
+            </Router>
+        );
+    }
 }
-
 export default App;
